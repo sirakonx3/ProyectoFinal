@@ -47,6 +47,7 @@
             this.btnRegistrar.TabIndex = 15;
             this.btnRegistrar.Text = "Registrar Municipio";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // picLogotipo
             // 
@@ -64,6 +65,7 @@
             this.btnTomarFoto.TabIndex = 13;
             this.btnTomarFoto.Text = "Agregar Foto";
             this.btnTomarFoto.UseVisualStyleBackColor = true;
+            this.btnTomarFoto.Click += new System.EventHandler(this.btnTomarFoto_Click);
             // 
             // txtDescripcion
             // 

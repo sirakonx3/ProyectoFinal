@@ -22,7 +22,12 @@ namespace ProyectoFinalNoe.Modelo
         [StringLength(500)]
         [Required(ErrorMessage = "Campo requerido")]
         public string sDescripcion { get; set; }
+        public Boolean bStatus { get; set; }
 
         public ICollection<Candidato> candidatos { get; set; }
+        public void Municipios()
+        {
+           this.bStatus = true;
+        }
     }
 }

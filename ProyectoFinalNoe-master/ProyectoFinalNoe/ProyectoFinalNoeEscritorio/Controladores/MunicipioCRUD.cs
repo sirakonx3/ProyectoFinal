@@ -4,26 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProyectoFinalNoe.Modelo;
+using System.Data.Entity;
 
 namespace ProyectoFinalNoeEscritorio.Controladores
 {
-   public class ListarCandidatos
+    public class MunicipioCRUD
     {
 
-        public static List<Candidato> VisualizarCandidatas()
+        public static void AgregarMunicipio(Municipio nMunicipio)
         {
             try
             {
-                using (var ctx = new DataModel())
+                using (var ctx=new DataModel())
                 {
-                    return ctx.Candidatos.ToList();
-
+                    ctx.Municipios.Add(nMunicipio);
+                    ctx.SaveChanges();
                 }
             }
             catch (Exception)
             {
+
                 throw;
             }
         }
+
+
+
     }
 }
