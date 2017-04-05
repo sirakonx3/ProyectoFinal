@@ -63,8 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controladores\Helpers\UsuarioHelper.cs" />
-    <Compile Include="Controladores\ListarCandidatas.cs" />
+    <Compile Include="Controladores\ListarCandidatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\frmAgregarCandidatos.cs">

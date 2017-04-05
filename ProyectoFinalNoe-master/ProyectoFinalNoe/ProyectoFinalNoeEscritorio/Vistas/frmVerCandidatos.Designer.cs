@@ -79,6 +79,7 @@
             this.Controls.Add(this.txtBuscar);
             this.Name = "frmVerCandidatos";
             this.Text = "frmVerCandidatos";
+            this.Load += new System.EventHandler(this.frmVerCandidatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCandidatas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
