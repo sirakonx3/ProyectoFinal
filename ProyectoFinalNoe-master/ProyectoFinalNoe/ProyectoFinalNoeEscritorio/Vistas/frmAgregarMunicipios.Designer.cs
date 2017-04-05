@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreMunicipio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.picLogotipo.Size = new System.Drawing.Size(242, 216);
             this.picLogotipo.TabIndex = 14;
             this.picLogotipo.TabStop = false;
+            this.picLogotipo.DoubleClick += new System.EventHandler(this.picLogotipo_DoubleClick);
             // 
             // btnTomarFoto
             // 
@@ -65,6 +67,7 @@
             this.btnTomarFoto.TabIndex = 13;
             this.btnTomarFoto.Text = "Agregar Foto";
             this.btnTomarFoto.UseVisualStyleBackColor = true;
+            this.btnTomarFoto.Visible = false;
             this.btnTomarFoto.Click += new System.EventHandler(this.btnTomarFoto_Click);
             // 
             // txtDescripcion
@@ -109,6 +112,10 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Nombre de Municipio:";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmAgregarMunicipios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,5 +147,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreMunicipio;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

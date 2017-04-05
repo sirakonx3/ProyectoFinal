@@ -18,7 +18,7 @@ namespace ProyectoFinalNoeEscritorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVerMunicipios());
+            Application.Run(new frmMain());
         }
     }
 }

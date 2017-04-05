@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProyectoFinalNoe.Modelo;
 using System.Data.Entity;
+using ProyectoFinalNoe.Modelo;
 
 namespace ProyectoFinalNoeEscritorio.Controladores
 {
@@ -17,7 +18,16 @@ namespace ProyectoFinalNoeEscritorio.Controladores
             {
                 using (var ctx=new DataModel())
                 {
-                    ctx.Municipios.Add(nMunicipio);
+                    if (nMunicipio.pkMunicipio> 0)
+                    {
+                        ctx.Entry(nMunicipio).State = EntityState.Modified;
+
+                    }
+                    else
+                    {
+                        ctx.Entry(nMunicipio).State = EntityState.Added;
+                    }
+                    
                     ctx.SaveChanges();
                 }
             }
@@ -28,7 +38,42 @@ namespace ProyectoFinalNoeEscritorio.Controladores
             }
         }
 
+        public void modificar(Municipio nMunicipio)
+        {
+            try
+            {
+                using (var ctx = new DataModel())
+                {
+                    ctx.Municipios.Attach(nMunicipio);
+                    ctx.Entry(nMunicipio).State = EntityState.Modified;
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+
+        public  void Eliminar(int pkMunicipio)
+        {
+            try
+            {
+                using (var ctx = new DataModel())
+                {
+                    Municipio mun = ctx.Municipios.Single(r => r.pkMunicipio == pkMunicipio);
+                    ctx.Entry(mun).State = EntityState.Deleted;
+                    ctx.SaveChanges();
+                     
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
     }
 }

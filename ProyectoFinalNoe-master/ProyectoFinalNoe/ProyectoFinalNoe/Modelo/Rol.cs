@@ -15,9 +15,9 @@ namespace ProyectoFinalNoe.Modelo
         public int pkRol { get; set; }
         [StringLength(200)]
         public String sNombre { get; set; }
-
-        public ICollection<Usuario> Usuarios { get; set; }
-        public ICollection<PermisoNegado> PermisosNegados { get; set; }
+        
+        public virtual ICollection<Usuario> Usuarios { get; set; }
+        public virtual ICollection<PermisoNegado> PermisosNegados { get; set; }
 
     }
 }

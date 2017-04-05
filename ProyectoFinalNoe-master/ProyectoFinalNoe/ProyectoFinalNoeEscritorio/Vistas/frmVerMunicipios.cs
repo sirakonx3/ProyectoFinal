@@ -16,9 +16,10 @@ namespace ProyectoFinalNoeEscritorio.Vistas
 {
     public partial class frmVerMunicipios : Form
     {
+        public static int municipiosforeano;
         public void LoadData()
         {
-            this.dtgMunicipio.DataSource = ListarMunicipios.Municipios();
+            this.dtgMunicipio.DataSource = ListarMunicipios.Municipios(true);
         }
         public frmVerMunicipios()
         {
@@ -33,8 +34,34 @@ namespace ProyectoFinalNoeEscritorio.Vistas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregarMunicipios mostrar = new frmAgregarMunicipios();
+            frmAgregarMunicipios mostrar = new frmAgregarMunicipios(this);
             mostrar.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+       
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            
+            municipiosforeano = Convert.ToInt32(this.dtgMunicipio.CurrentRow.Cells["pkMunicipio"].Value);//modificar
+            frmModificarMunicipio f = new frmModificarMunicipio(this);
+            f.ShowDialog();
+        }
+
+        private void dtgMunicipio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MunicipioCRUD mun = new MunicipioCRUD();
+            mun.Eliminar(Convert.ToInt32(this.dtgMunicipio.CurrentRow.Cells["pkMunicipio"].Value));
+
+            LoadData();
         }
     }
 }

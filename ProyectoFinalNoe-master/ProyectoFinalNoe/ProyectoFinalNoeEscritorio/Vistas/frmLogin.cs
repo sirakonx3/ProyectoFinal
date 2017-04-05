@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoFinalNoeEscritorio.Vistas;
 
+using ProyectoFinalNoeEscritorio.Vistas1;
 namespace ProyectoFinalNoeEscritorio.Vistas1
 {
     public partial class frmLogin : Form
@@ -15,6 +17,11 @@ namespace ProyectoFinalNoeEscritorio.Vistas1
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -31,13 +31,15 @@ namespace ProyectoFinalNoe.Modelo
         [StringLength(100)]
         [Required(ErrorMessage = "Campo requerido")]
         public string sNivel { get; set; }
-        [StringLength(200)]
+        
         [Required(ErrorMessage = "Campo requerido")]
         public string sFoto { get; set; }
 
         public Boolean bStatus { get; set; }
 
         public int ilike { get; set; }
+
+      
 
         public virtual Municipio Municipio { get; set; }
         public virtual Usuario Usuarios { get; set; }

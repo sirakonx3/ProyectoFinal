@@ -20,6 +20,8 @@ namespace ProyectoFinalNoe.Modelo
 
         public Boolean bStatus { get; set; }
 
+  
+
         public virtual Rol rol { get; set; }
 
 

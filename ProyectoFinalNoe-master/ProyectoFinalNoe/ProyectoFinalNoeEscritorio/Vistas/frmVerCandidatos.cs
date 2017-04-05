@@ -14,7 +14,12 @@ namespace ProyectoFinalNoeEscritorio.Vistas1
 {
     public partial class frmVerCandidatos : Form
     {
-        public frmVerCandidatos()
+
+        public void LoadData()
+        {
+            dgvCandidatas.DataSource = ListarCandidatos.VisualizarCandidatas();
+        }
+            public frmVerCandidatos()
         {
             InitializeComponent();
             dgvCandidatas.AutoGenerateColumns = false;
@@ -22,7 +27,13 @@ namespace ProyectoFinalNoeEscritorio.Vistas1
 
         private void frmVerCandidatos_Load(object sender, EventArgs e)
         {
-            dgvCandidatas.DataSource = ListarCandidatos.VisualizarCandidatas();
+            LoadData();  
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarCandidatos mostrar = new frmAgregarCandidatos(this);
+            mostrar.ShowDialog();
         }
     }
 }

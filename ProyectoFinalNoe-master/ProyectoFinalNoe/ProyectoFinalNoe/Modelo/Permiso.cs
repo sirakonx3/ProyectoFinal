@@ -17,7 +17,7 @@ namespace ProyectoFinalNoe.Modelo
         public String sNombre { get; set; }
         [StringLength(200)]
         public String sDescripcion { get; set; }
-
-        public ICollection<PermisoNegado> PermisosNegados { get; set; }
+        
+        public virtual ICollection<PermisoNegado> PermisosNegados { get; set; }
     }
 }

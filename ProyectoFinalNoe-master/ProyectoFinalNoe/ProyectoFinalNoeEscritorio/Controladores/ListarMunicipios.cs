@@ -9,13 +9,15 @@ namespace ProyectoFinalNoeEscritorio.Controladores
 {
     public class ListarMunicipios
     {
-        public static List<Municipio> Municipios()
+
+
+        public static List<Municipio> Municipios(Boolean status)
         {
             try
             {
                 using (var ctx = new DataModel())
                 {
-                    return ctx.Municipios.ToList();
+                    return ctx.Municipios.Where(r=>r.bStatus==status).ToList();
                 }
             }
             catch (Exception)
@@ -24,5 +26,25 @@ namespace ProyectoFinalNoeEscritorio.Controladores
                 throw;
             }
         }
+
+        
+        public static Municipio BuscarPorId(int nID)
+        {            
+            try
+            {
+                using (var ctx = new DataModel())
+                {
+
+                    return ctx.Municipios.Where(r => r.pkMunicipio == nID).FirstOrDefault();
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
     }
 }
