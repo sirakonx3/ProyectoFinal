@@ -115,12 +115,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ProyectoFinalNoeWeb\ProyectoFinalNoeWeb.csproj">
-      <Project>{84b743d9-30d4-4079-bdcd-3b56cb6bba9b}</Project>
-      <Name>ProyectoFinalNoeWeb</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
