@@ -16,7 +16,7 @@ namespace ProyectoFinalNoe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vistas.frmVerCandidatos());
+            Application.Run(new Form());
         }
     }
 }

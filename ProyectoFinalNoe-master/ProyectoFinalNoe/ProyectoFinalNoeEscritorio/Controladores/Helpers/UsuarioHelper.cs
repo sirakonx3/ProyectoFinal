@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProyectoFinalNoe.Modelo;
+
 namespace ProyectoFinalNoe.Controladores.Helpers
 {
    public class UsuarioHelper
