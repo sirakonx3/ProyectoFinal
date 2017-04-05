@@ -17,6 +17,7 @@ namespace ProyectoFinalNoeEscritorio.Vistas1
         public frmVerCandidatos()
         {
             InitializeComponent();
+            dgvCandidatas.AutoGenerateColumns = false;
         }
 
         private void frmVerCandidatos_Load(object sender, EventArgs e)

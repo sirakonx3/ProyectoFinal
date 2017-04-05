@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoFinalNoeEscritorio.Vistas;
+using ProyectoFinalNoeEscritorio.Vistas1;
 
 namespace ProyectoFinalNoeEscritorio
 {
@@ -16,7 +18,7 @@ namespace ProyectoFinalNoeEscritorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vistas1.frmVerCandidatos());
+            Application.Run(new frmVerMunicipios());
         }
     }
 }
